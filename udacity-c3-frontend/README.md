@@ -1,5 +1,6 @@
 # Udagram Front End
 
+## Run locally
+
 - `npm install`
-- `ionic build`
-- `ionic serve`
+- `npm run dev`
