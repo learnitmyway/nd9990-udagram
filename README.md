@@ -12,6 +12,22 @@ The project is split as follows:
 1. udacity-c3-restapi-user - a Node-Express user microservice.
 1. [Image filter](https://github.com/learnitmyway/nd9990-udagram-image-filter) (separate repo)
 
+## Project Instructions
+
+### Steps
+
+1. Divide the application into smaller services
+1. Containerize the application, create the Kubernetes resource, and deploy it to a Kubernetes cluster.
+1. Implement automatic continuous integration (CI) and continuous delivery (CD) using Travis CI.
+1. Extend the application with deployments and be able to do rolling-updates and rollbacks
+
+### Submission instructions
+
+- Screenshot of TravisCI which shows the successful build and deploy steps
+- The public GitHub repo and the docker hub images
+- Screenshot of kubectl get pod which shows all running containers
+- Screenshot of the application
+
 ## Environment variables
 
 Add to `.zshrc`:
