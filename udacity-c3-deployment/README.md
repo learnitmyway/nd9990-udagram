@@ -19,6 +19,7 @@ In `/k8s`:
   - `aws-secret.yaml`
     - Replace `___INSERT_AWS_CREDENTIALS_FILE__BASE64____` with `cat ~/.aws/credentials | base64`
   - `env-secret.yaml`
+    - Replace username and password with `echo -n <username|password> | base64`
 
 ### Run locally
 
@@ -30,3 +31,8 @@ In `/k8s`:
   - `kubectl port-forward service/reverseproxy 8080:8080`
   - `kubectl port-forward service/frontend 8100:8100`
 - View the app at `localhost:8100`
+
+Troubleshooting:
+
+- delete a secret `kubectl delete secret <secret>`
+- restart deployments `kubectl rollout restart deployment`
