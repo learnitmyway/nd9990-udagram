@@ -15,5 +15,5 @@ before_install:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
 
-install 
+install:
   - echo 'hello?'
