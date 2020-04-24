@@ -38,9 +38,9 @@ jobs:
         - npm install
         - npm run build
         - cd -
-        - cd udacity-c3-deployment/docker
     - stage: dockerize
       script: 
+        - cd udacity-c3-deployment/docker
         - docker-compose -f docker-compose-build.yaml build --parallel
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - docker-compose -f docker-compose-build.yaml push
