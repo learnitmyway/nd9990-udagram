@@ -21,4 +21,19 @@ before_install:
   - sudo mv ./kubectl /usr/local/bin/kubectl
 
 install:
-  - echo 'hello?'
+  - ls -al
+  - cd udacity-c3-frontend
+  - ls -al
+  - npm run build
+  - cd -
+  - cd udacity-c3-restapi-feed/
+  - npm run build
+  - cd -
+  - cd udacity-c3-restapi-user/
+  - ls -al
+  - npm run build
+  - cd -
+  - cd udacity-c3-deployment/docker
+  - ls -al
+  - docker-compose -f docker-compose-build.yaml build --parallel
+  - docker-compose -f docker-compose-build.yaml push
