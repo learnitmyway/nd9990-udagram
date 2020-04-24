@@ -22,20 +22,25 @@ before_install:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
 
-script:
-  - cd udacity-c3-frontend
-  - npm install
-  - npm run build
-  - cd -
-  - cd udacity-c3-restapi-feed/
-  - npm install
-  - npm run build
-  - cd -
-  - cd udacity-c3-restapi-user/
-  - npm install
-  - npm run build
-  - cd -
-  - cd udacity-c3-deployment/docker
-  - docker-compose -f docker-compose-build.yaml build --parallel
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker-compose -f docker-compose-build.yaml push
+jobs:
+  include:
+    - stage: build
+      script: 
+        - cd udacity-c3-frontend
+        - npm install
+        - npm run build
+        - cd -
+        - cd udacity-c3-restapi-feed/
+        - npm install
+        - npm run build
+        - cd -
+        - cd udacity-c3-restapi-user/
+        - npm install
+        - npm run build
+        - cd -
+        - cd udacity-c3-deployment/docker
+    - stage: dockerize
+      script: 
+        - docker-compose -f docker-compose-build.yaml build --parallel
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - docker-compose -f docker-compose-build.yaml push
