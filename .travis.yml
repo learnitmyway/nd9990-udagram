@@ -24,18 +24,18 @@ before_install:
 
 script:
   - cd udacity-c3-frontend
-  # - npm install
-  # - npm run build
-  # - cd -
-  # - cd udacity-c3-restapi-feed/
-  # - npm install
-  # - npm run build
-  # - cd -
-  # - cd udacity-c3-restapi-user/
-  # - npm install
-  # - npm run build
-  # - cd -
-  # - cd udacity-c3-deployment/docker
-  # - docker-compose -f docker-compose-build.yaml build --parallel
-  # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  # - docker-compose -f docker-compose-build.yaml push
+  - npm install
+  - npm run build
+  - cd -
+  - cd udacity-c3-restapi-feed/
+  - npm install
+  - npm run build
+  - cd -
+  - cd udacity-c3-restapi-user/
+  - npm install
+  - npm run build
+  - cd -
+  - cd udacity-c3-deployment/docker
+  - docker-compose -f docker-compose-build.yaml build --parallel
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker-compose -f docker-compose-build.yaml push
