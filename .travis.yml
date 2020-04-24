@@ -24,13 +24,16 @@ install:
   - ls -al
   - cd udacity-c3-frontend
   - ls -al
+  - npm install
   - npm run build
   - cd -
   - cd udacity-c3-restapi-feed/
+  - npm install
   - npm run build
   - cd -
   - cd udacity-c3-restapi-user/
   - ls -al
+  - npm install
   - npm run build
   - cd -
   - cd udacity-c3-deployment/docker
