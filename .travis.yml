@@ -22,7 +22,7 @@ before_install:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
 
-install:
+script:
   - cd udacity-c3-frontend
   # - npm install
   # - npm run build
