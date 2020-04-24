@@ -103,3 +103,7 @@ export JWT_SECRET=helloworld;
 
 - `aws confgiure`
 - Check everything is ok in `~/.aws`
+
+## Deployment
+
+- Set DOCKER_USERNAME and DOCKER_PASSWORD where the password is the token
