@@ -1,6 +1,6 @@
 # Udagram
 
-[![Build Status](https://travis-ci.com/learnitmyway/nd9990-udagram.svg?branch=master)](https://travis-ci.com/learnitmyway/nd9990-udagram)
+[![Build Status](https://travis-ci.org/learnitmyway/nd9990-udagram.svg?branch=master)](https://travis-ci.org/learnitmyway/nd9990-udagram)
 
 [Link to starter code](https://github.com/scheeles/cloud-developer/tree/06-ci/course-03/exercises)
 
