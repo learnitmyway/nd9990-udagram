@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/learnitmyway/nd9990-udagram.svg?branch=master)](https://travis-ci.org/learnitmyway/nd9990-udagram)
 
-Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
+A social media app that uses microservices and is part of the [Udacity Cloud Developer Nanodegree](https://www.udacity.com/course/cloud-developer-nanodegree--nd9990)
 
 The project is split as follows:
 
